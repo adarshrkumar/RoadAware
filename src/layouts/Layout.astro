@@ -1,0 +1,53 @@
+---
+var { title } = Astro.props
+var dTitle = `${title} | RoadAware | Learn About Infrastructure and Transportation`
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{dTitle}</title>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="container nav">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="RoadAware Logo">
+                RoadAware
+            </div>
+            <label class="menu-toggle" for="menu-toggle">
+                <i data-feather="menu"></i>
+            </label>
+            <input hidden type="checkbox" id="menu-toggle">
+            <div class="nav-links">
+                <button id="close-mobile-menu" class="mobile-menu-close">
+                    <i data-feather="x"></i>
+                </button>
+                <a href="#welcome-section" class="nav-link">Welcome</a>
+                <a href="#infrastructure-challenges" class="nav-link">Infrastructure</a>
+                <a href="#transportation-issues" class="nav-link">Transportation</a>
+                <a href="#did-you-know" class="nav-link">Did You Know?</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content container">
+        <slot />
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2023 RoadAware. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
