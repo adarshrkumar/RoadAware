@@ -1,7 +1,7 @@
 ---
 import '../styles/globals.scss'
 
-var { title } = Astro.props
+var { title } = Astro.pr
 
 var dTitle = 'RoadAware | Learn About Infrastructure and Transportation'
 if (title !== 'Home' && title !== '' && title) dTitle = `${title} | ${dTitle}`
@@ -51,6 +51,6 @@ if (title !== 'Home' && title !== '' && title) dTitle = `${title} | ${dTitle}`
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="/static/js/main.js"></script>
+    <script src="/static/js/main.js" is:inline></script>
 </body>
 </html>
