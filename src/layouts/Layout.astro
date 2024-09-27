@@ -1,7 +1,7 @@
 ---
 import '../styles/globals.scss'
 
-var { title } = Astro.pr
+var { title } = Astro.props
 
 var dTitle = 'RoadAware | Learn About Infrastructure and Transportation'
 if (title !== 'Home' && title !== '' && title) dTitle = `${title} | ${dTitle}`
