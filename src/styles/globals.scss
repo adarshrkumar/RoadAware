@@ -30,6 +30,10 @@ address, blockquote, details, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hg
     padding-right: 1.5rem;
 }
 
+.hero {
+    text-align: center;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -133,21 +137,34 @@ address, blockquote, details, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hg
     padding-top: 2rem;
     padding-bottom: 2rem;
 
-    &.main-content, &.section.split {
+    &.main-content {
         $gap: 3rem;
 
         display: flex;
         flex-direction: column;
         gap: $gap;
 
-        &.section.split {
-            $gap: math.div($gap, 2);
+        & .split {
+            gap: math.div($gap, 2);
         }        
     }
 }
 
 .section {
     // margin-bottom: 3rem;
+    &:not(.split .section) {
+        box-sizing: border-box;
+        padding: 1rem;
+        background-color: #ffffff;
+        border-radius: 2rem;
+    }
+}
+
+.section-title, .level-title, .level-section-title {
+    margin-inline: auto;
+    width: fit-content;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
 }
 
 .main-section-title {
@@ -161,14 +178,49 @@ address, blockquote, details, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hg
 }
 
 .sub-section-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .split {
+    display: grid;
 
+    grid-template-columns: repeat(var(--cols, 1), 1fr);
+    grid-template-rows: repeat(var(--rows, 1), 1fr);
+
+    & > * {
+        flex: 1;
+    }
+
+    @for $i from 0 through 10 {
+        &[data-columns="#{$i}"] {
+            --cols: #{$i};
+        }
+        &[data-rows="#{$i}"] {
+            --rows: #{$i};
+        }
+    }
 }
+
+.level {
+    &-title {
+        font-size: 1.5rem;
+    }
+}
+
+.level {
+    &-title {
+        margin-bottom: 0.75em;
+    }
+    &-section-title {
+        font-size: 1.25rem;
+
+        margin-bottom: 0.5em;
+    }
+}
+
+
 
 /* Footer styles */
 .footer {
