@@ -178,8 +178,11 @@ body {
 .split {
     display: grid;
 
-    grid-template-columns: repeat(var(--cols, 1), minmax(0, 1fr));
-    grid-template-rows: repeat(var(--rows, 1), minmax(0, 1fr));
+    $grid: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: $grid;
+    grid-template-rows: $grid;
+
+    justify-items: center;
 
     & > * {
         flex: 1;
