@@ -178,7 +178,7 @@ body {
 .split {
     display: grid;
 
-    $grid: repeat(auto-fill, minmax(350px, 1fr));
+    $grid: repeat(auto-fill, minmax(350px, 1fr))
     grid-template-columns: $grid;
     grid-template-rows: $grid;
 
