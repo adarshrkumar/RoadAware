@@ -7,15 +7,6 @@ body {
     background-color: #f3f4f6;
 }
 
-address, blockquote, details, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hgroup, li, menu, ol, p, pre, table, tbody, tfoot, thead, ul {
-    &:first-child {
-        margin-top: 0;
-    }
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
 /* Header styles */
 .header {
     background-color: #ffffff;
@@ -160,9 +151,10 @@ address, blockquote, details, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hg
     }
 }
 
-.section-title, .level-title, .level-section-title {
+.section-title, .level-title, .who, .level-section-title {
     margin-inline: auto;
     width: fit-content;
+    text-align: center;
     text-wrap: balance;
     overflow-wrap: anywhere;
 }
@@ -211,12 +203,26 @@ address, blockquote, details, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hg
 
 .level {
     &-title {
-        margin-bottom: 0.75em;
+        margin-block: 1em;
+    }
+    .who {
+        margin-block: 0.75rem;
+        font-size: 1.25rem;
     }
     &-section-title {
-        font-size: 1.25rem;
+        font-size: 1rem;
 
-        margin-bottom: 0.5em;
+        margin-block: 0.5em;
+    }
+
+    :is(.rnr, .hai, .org) > p {
+        margin-top: 0;
+
+        text-align: center;
+        line-height: 1.5lh;
+
+        word-wrap: break-word;
+        text-wrap: balance;
     }
 }
 
@@ -232,6 +238,17 @@ address, blockquote, details, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hg
 
 .footer-content {
     text-align: center;
+}
+
+address, blockquote, details, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hgroup, li, menu, ol, p, pre, table, tbody, tfoot, thead, ul {
+    &:not(.level-section-title) {
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 /* Utility classes */
