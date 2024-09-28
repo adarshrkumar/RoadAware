@@ -178,8 +178,8 @@ body {
 .split {
     display: grid;
 
-    grid-template-columns: repeat(var(--cols, 1), 1fr);
-    grid-template-rows: repeat(var(--rows, 1), 1fr);
+    grid-template-columns: repeat(var(--cols, 1), minmax(0, 1fr));
+    grid-template-rows: repeat(var(--rows, 1), minmax(0, 1fr));
 
     & > * {
         flex: 1;
