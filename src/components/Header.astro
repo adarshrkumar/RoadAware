@@ -1,5 +1,43 @@
 ---
 const { page } = Astro.props
+
+var links = [
+    '#welcome', 
+    '#roads', 
+    '#infrastructure', 
+    '#public-transportation'
+]
+
+var navItems = []
+
+links.forEach(l => {
+    var link = l
+
+    var name = link
+    if (name.startsWith('#')) {
+        name = name.slice(1)
+        var nameParts = []
+        if (name.includes('-')) nameParts = name.split('-')
+        else nameParts = [name]
+
+        nameParts.forEach((p, i) => {
+            nameParts[i] = `${p.slice(0, 1).toUpperCase()}${p.slice(1)}`
+        })
+
+        name = nameParts.join(' ')
+
+    }
+
+    if (page !== 'Home' && page !== '' && link.startsWith('#')) {
+        link = `/${link}`
+    }
+
+    navItems.push({
+        href: link,
+        title: name,
+    })
+})
+
 ---
 <header class="header">
     <nav class="container nav">
@@ -8,10 +46,11 @@ const { page } = Astro.props
             <span class="text">RoadAware</span>
         </div>
         <div class="nav-links">
-            <a href="/#welcome" class="nav-link">Welcome</a>
-            <a href="/#roads" class="nav-link">Roads</a>
-            <a href="/#infrastructure" class="nav-link">Infrastructure</a>
-            <a href="/#transportation" class="nav-link">Public Transportation</a>
+            {
+                navItems.map(i => {
+                    return <a href={i.link} class="nav-link">{i.title}</a>
+                })
+            }
         </div>
     </nav>
 </header>
