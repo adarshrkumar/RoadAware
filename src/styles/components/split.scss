@@ -2,6 +2,7 @@
     display: grid;
 
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--gap);
 
     &[data-img-pos="l"] {
         grid-template-columns: minmax(calc((233 + 1/3)*1px), 1fr) minmax(calc((466 + 2/3)*1px), 2fr);

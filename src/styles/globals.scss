@@ -1,5 +1,7 @@
 @use 'sass:math';
 
+$margin: 2rem;
+
 /* Base styles */
 body {
     margin: 0;
@@ -14,8 +16,6 @@ body {
 }
 
 .container, .hero {
-    $margin: 2rem;
-
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
@@ -134,8 +134,8 @@ body {
 
 /* Main content styles */
 .main-content {
-    $margin: 2rem;
     $gap: $margin;
+    --gap: #{$gap};
 
     display: flex;
     flex-direction: column;
