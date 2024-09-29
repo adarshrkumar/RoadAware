@@ -1,0 +1,14 @@
+@use 'sass:math';
+
+.split {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    &[data-img-pos="l"] {
+        grid-template-columns: minmax(calc((233 + 1/3)*1px), 1fr) minmax(calc((466 + 2/3)*1px), 2fr);
+    }
+    &[data-img-pos="r"] {
+        grid-template-columns: minmax(calc((466 + 2/3)*1px), 2fr) minmax(calc((233 + 1/3)*1px), 1fr);
+    }
+}
