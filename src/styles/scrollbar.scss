@@ -5,28 +5,22 @@
     width: $scrollbar-size;
     height: $scrollbar-size;
   
-    // border-radius: 25px;
-  
     transition: all 500ms ease-in-out;
 }
    
 // Track
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #f7f7f7;
     border-radius: 25px;
 }
   
 // Handle
 ::-webkit-scrollbar-thumb {
-    background: #999; 
-
+    background-color: #999; 
     border-radius: 25px;
-  
-    transition: background-color 500ms ease-in;
 }
   
 // Handle on hover
 ::-webkit-scrollbar-thumb:hover {
     background-color: #bbb;
-    transition: background-color 500ms ease-out;
 }
