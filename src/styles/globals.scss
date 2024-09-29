@@ -142,23 +142,27 @@ body {
     gap: $gap;
 
     & .carousel {
-        gap: math.div($gap, 2);
+        gap: $gap;
     }        
 }
 
-.main-section, .hero, .carousel {
+.main-section, .hero {
     $padding: 1rem;
+    --padding: #{$padding};
 
-    & .main-section-title, .split > *, .carousel:has(.split) {
+    &:not(:has(.split)), .split > *, &:has(.split) .section-title {
         box-sizing: border-box;
         padding: $padding;
 
         background-color: #ffffff;
 
         // border: solid 1px #000000;
-        border-radius: 2rem;
-
         box-shadow: 0 0 $padding 0 #d3d3d3;
+
+        border-radius: 2rem;
+        &.img-parent img {
+            border-radius: #{2rem - $padding};
+        }
     }
 }
 

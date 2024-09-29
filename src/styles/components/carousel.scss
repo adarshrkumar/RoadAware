@@ -1,4 +1,7 @@
 .carousel {
+    box-sizing: border-box;
+    padding: var(--padding);
+    
     display: grid;
 
     // width: calc(var(--cols, 1)*100%);
