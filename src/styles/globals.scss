@@ -141,14 +141,14 @@ body {
     flex-direction: column;
     gap: $gap;
 
-    & .split {
+    & .carousel {
         gap: math.div($gap, 2);
     }        
 }
 
 .main-section, .hero {
     // margin-bottom: 3rem;
-    &:not(.split .section) {
+    &:not(.carousel .section) {
         box-sizing: border-box;
         padding: 1rem;
 
@@ -191,17 +191,21 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.split {
+.carousel {
     display: grid;
 
-    $grid: repeat(auto-fill, minmax(350px, 1fr));
-    grid-template-columns: $grid;
-    grid-template-rows: $grid;
+    // width: calc(var(--cols, 1)*100%);
 
-    justify-items: center;
+    $grid: repeat(var(--cols, 1), 100%);
+    grid-template-columns: $grid;
+    grid-template-rows: repeat(1, 1fr);
+
+    
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
 
     & > * {
-        flex: 1;
+        scroll-snap-align: center;
     }
 
     @for $i from 0 through 10 {
@@ -234,7 +238,7 @@ body {
         margin-block: 0.5em;
     }
 
-    :is(.rnr, .hai, .org) > p {
+    :is(&, .rnr, .hai, .org) > p {
         margin-top: 0;
 
         text-align: center;
