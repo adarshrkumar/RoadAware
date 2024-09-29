@@ -147,16 +147,18 @@ body {
 }
 
 .main-section, .hero, .carousel {
-    &:not(:has(.split)), &:is(.main-section, .hero):has(.split) .main-section-title, .split:not(.carousel .split), .carousel:has(.split) {
+    $padding: 1rem;
+
+    & .main-section-title, .split > *, .carousel:has(.split) {
         box-sizing: border-box;
-        padding: 1rem;
+        padding: $padding;
 
         background-color: #ffffff;
 
         // border: solid 1px #000000;
         border-radius: 2rem;
 
-        box-shadow: 0 0 1rem 0 #d3d3d3;
+        box-shadow: 0 0 $padding 0 #d3d3d3;
     }
 }
 
