@@ -206,6 +206,7 @@ body {
 
     & > * {
         scroll-snap-align: center;
+        scroll-snap-stop: always;
     }
 
     @for $i from 0 through 10 {
