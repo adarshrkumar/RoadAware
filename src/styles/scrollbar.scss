@@ -1,6 +1,6 @@
 // Custom Scrollbar
 ::-webkit-scrollbar {
-    $scrollbar-size: 5px;
+    $scrollbar-size: 10px;
 
     width: $scrollbar-size;
     height: $scrollbar-size;
@@ -13,12 +13,13 @@
 // Track
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
+    border-radius: 25px;
 }
   
 // Handle
 ::-webkit-scrollbar-thumb {
     background: #999; 
-  
+
     border-radius: 25px;
   
     transition: background-color 500ms ease-in;
