@@ -1,25 +1,21 @@
 {
-  "name": "",
-  "type": "module",
+  "name": "@example/basics",
   "version": "0.0.1",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@jridgewell/sourcemap-codec": "file:@jridgewell/sourcemap-codec",
-    "astro": "^4.15.9",
-    "mocha": "^9.2.2",
-    "rollup": "^2.79.2",
-    "semver": "^7.6.3",
-    "string-width": "^7.2.0",
-    "widest-line": "^5.0.0",
-    "yargs-parser": "^21.1.1"
+    "preview": "astro preview"
   },
   "devDependencies": {
-    "sass": "^1.79.4"
+    "astro": "^4.15.4",
+    "prettier-plugin-astro": "^0.13.0",
+    "sass": "^1.77.5"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.1.6",
+    "cypress": "^13.11.0",
+    "path-to-regexp": "^8.1.0"
   }
 }
