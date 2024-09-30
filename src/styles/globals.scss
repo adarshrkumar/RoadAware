@@ -60,7 +60,7 @@ body {
         padding: $margin;
     }
     &.hero {
-        margin-top: $margin;
+        margin: $margin $margin 0;
     }
 }
 
