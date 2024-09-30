@@ -1,0 +1,81 @@
+body:has(.image > input[type="checkbox"][id]:checked ~ label[for]) {
+    // overflow: hidden;
+}
+
+.img-parent {
+    overflow: hidden;
+}
+
+.image {
+    display: block;
+
+    &, > label[for] {
+        height: 100%;
+        width: 100%;
+    }
+
+    &:has(> input[type="checkbox"][id]:checked) {
+        background-image: var(--image);
+        background-position: center;
+        background-size: cover;
+
+        &:has(> label[for] > img[style*="--l: 0;"]) {
+            background-position-x: left;
+        }
+        &:has(> label[for] > img[style*="--r: 0;"]) {
+            background-position-x: right;
+        }
+
+    }
+
+    > input[type="checkbox"][id] {
+        display: none;
+
+        &:checked ~ label[for] {
+            position: fixed;
+            inset: 0;
+
+            box-sizing: border-box;
+            padding: 2rem;
+
+            background-color: #ffffff77;
+            border-radius: 0;
+
+            z-index: 2;
+
+            > img {
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+
+                height: auto;
+                max-height: calc(100% - 4rem);
+                max-width: calc(100% - 4rem);
+
+                border-radius: 2rem;
+
+                transform: position 2s ease;
+            }
+        }
+    }
+    > label[for] {
+        position: relative;
+
+        cursor: pointer;
+        &, > img {
+            display: block;
+        }
+        > img {
+            position: absolute;
+
+            top: var(--t, 50%);
+            right: var(--r, unset);
+            bottom: var(--b, unset);
+            left: var(--l, 50%);
+
+            translate: var(--t-x, -50%) var(--t-y, -50%);
+
+            max-height: 100%;
+        }
+    }
+}

@@ -1,7 +1,11 @@
 ---
-const { id, alt, dataAlign } = Astro.props
+import '../styles/components/image.scss'
+
+const { id, alt, style } = Astro.props
 ---
-<input type="checkbox" id={id} />
-<label for={id}>
-    {dataAlign ? <img data-align={dataAlign} src={`/img/${id}`} alt={alt} /> : <img src={`/img/${id}`} alt={alt} />}
-</label>
+<div class="image" style={`--image: url('/img/${id}');`}>
+    <input type="checkbox" id={id} />
+    <label for={id}>
+        {style ? <img style={style} src={`/img/${id}`} alt={alt} /> : <img src={`/img/${id}`} alt={alt} />}
+    </label>
+</div>
