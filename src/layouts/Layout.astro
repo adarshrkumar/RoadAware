@@ -28,11 +28,11 @@ var year = date.getFullYear()
     <link href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css" rel="stylesheet">
 </head>
 <body>
-    <button class="top-btn" onclick="goToTop()">
+    <a href="#top" class="top-btn">
         <svg viewBox="0 0 300 300">
             <path d="m 150 0 l -150 150 l 100 0 l 0 150 l 100 0 l 0 -150 l 100 0 l -150 -150 z" />
         </svg>
-    </button>
+    </a>
 
     <Header page={title} />
 
@@ -47,13 +47,6 @@ var year = date.getFullYear()
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script is:inline>
-        function goToTop() {
-            window.scrollTo({
-                top: 0, behavior: 'smooth'
-            });
-        }
-    </script>
     <script src="/js/main.js" is:inline></script>
 </body>
 </html>
