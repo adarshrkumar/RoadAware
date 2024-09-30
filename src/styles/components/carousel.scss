@@ -1,5 +1,7 @@
 .carousel {
     box-sizing: border-box;
+    margin: calc(-1*var(--padding));
+    margin-top: 0;
     padding: var(--padding);
     
     display: grid;
