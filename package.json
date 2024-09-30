@@ -12,6 +12,8 @@
   "dependencies": {
     "astro": "^4.15.9",
     "semver": "^7.6.3",
+    "string-width": "^7.2.0",
+    "widest-line": "^5.0.0",
     "yargs-parser": "^21.1.1"
   },
   "devDependencies": {
