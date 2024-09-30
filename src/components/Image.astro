@@ -1,7 +1,7 @@
 ---
-const { id, src, alt, dataAlign } = Astro.props
+const { id, alt, dataAlign } = Astro.props
 ---
 <input type="checkbox" id={id} />
 <label for={id}>
-    {dataAlign ? <img data-align={dataAlign} src={src} alt={alt} /> : <img src={src} alt={alt} />}
+    {dataAlign ? <img data-align={dataAlign} src={`/img/${id}`} alt={alt} /> : <img src={`/img/${id}`} alt={alt} />}
 </label>
