@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+import Image from '../components/Image.astro';
+
 ---
 <Layout title="Home">
     <!-- Roads -->
@@ -9,7 +11,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="carousel" data-columns="3">
             <section class="section sub-section split" data-img-pos="l">
                 <div class="img-parent">
-                    <img src="/img/local-roads.jpg" alt="The image shows a damaged road and bridge in Santa Cruz County, with caution tape, a warning post, and evidence of fire damage, such as burnt trees and charred surroundings." />
+                    <Image id="local-roads.jpg" alt="The image shows a damaged road and bridge in Santa Cruz County, with caution tape, a warning post, and evidence of fire damage, such as burnt trees and charred surroundings." />
                 </div>
                 <div class="level local">
                     <h4 class="level-title">Local</h4>
@@ -39,12 +41,12 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
                 <div class="img-parent">
-                    <img src="/img/state-roads.png" alt="The California Transportation Commision Logo" />
+                    <Image id="state-roads.png" alt="The California Transportation Commision Logo" />
                 </div>
             </section>
             <section class="section sub-section split" data-img-pos="l">
                 <div class="img-parent">
-                    <img src="/img/federal-roads.jpg" alt="An aerial view of a road construction site next to a completed road, with a crane and construction equipment visible, surrounded by a forested area." />
+                    <Image id="federal-roads.jpg" alt="An aerial view of a road construction site next to a completed road, with a crane and construction equipment visible, surrounded by a forested area." />
                 </div>
                 <div class="level federal">
                     <h4 class="level-title">Federal</h4>
@@ -80,12 +82,12 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
                 <div class="img-parent">
-                    <img src="/img/local-infrastructure.jpg" alt="Construction of a highway improvment project, with heavy machinery, scaffolding, and workers visible." />
+                    <Image id="local-infrastructure.jpg" alt="Construction of a highway improvment project, with heavy machinery, scaffolding, and workers visible." />
                 </div>
             </section>
             <section class="section sub-section split" data-img-pos="l">
                 <div class="img-parent">
-                    <img src="/img/newsom-speech.jpg" alt='California Governor Gavin Newsom speaking at a podium labeled "Building More, Creating Jobs," surrounded by construction workers and officials at a job site.' />
+                    <Image id="newsom-speech.jpg" alt='California Governor Gavin Newsom speaking at a podium labeled "Building More, Creating Jobs," surrounded by construction workers and officials at a job site.' />
                 </div>
                 <div class="level state">
                     <h4 class="level-title">State</h4>
@@ -114,7 +116,7 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
                 <div class="img-parent">
-                    <img src="/img/biden-signing.jpg" alt="President Joe Biden signing a document surrounded by a group of people, including Vice President Kamala Harris, lawmakers, and officials, outside the White House" />
+                    <Image id="biden-signing.jpg" alt="President Joe Biden signing a document surrounded by a group of people, including Vice President Kamala Harris, lawmakers, and officials, outside the White House" />
                 </div>
             </section>
         </div>
@@ -126,7 +128,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="carousel" data-columns="3">
             <section class="section sub-section split" data-img-pos="l">
                 <div class="img-parent">
-                    <img data-align="right" src="/img/local-transportation.jpg" alt="People waiting at a bus stop, including a woman listening to music with headphones, with a SamTrans bus approaching in the background on a sunny day." />
+                    <Image dataAlign="right" src="/img/local-transportation.jpg" alt="People waiting at a bus stop, including a woman listening to music with headphones, with a SamTrans bus approaching in the background on a sunny day." />
                 </div>
                 <div class="level local">
                     <h4 class="level-title">Local</h4>
@@ -164,12 +166,12 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
                 <div class="img-parent">
-                    <img data-align="left" src="/img/complete-streets.jpg" alt='Illustration explaining "What are Complete Streets?" with descriptions of different spaces for people, bikes, cars, mass transit, shared mobility, and refuge, showing elements like curb ramps, bike routes, transit-friendly lanes, and public spaces for social interaction.' />
+                    <Image dataAlign="left" src="/img/complete-streets.jpg" alt='Illustration explaining "What are Complete Streets?" with descriptions of different spaces for people, bikes, cars, mass transit, shared mobility, and refuge, showing elements like curb ramps, bike routes, transit-friendly lanes, and public spaces for social interaction.' />
                 </div>
             </section>
             <section class="section sub-section split" data-img-pos="l">
                 <div class="img-parent">
-                    <img src="/img/federal-transportation.jpg" alt='A bus labeled "UC Davis" from FAST public transit is driving in front of the California State Capitol building on a sunny day, surrounded by green trees and manicured landscaping.' />
+                    <Image id="federal-transportation.jpg" alt='A bus labeled "UC Davis" from FAST public transit is driving in front of the California State Capitol building on a sunny day, surrounded by green trees and manicured landscaping.' />
                 </div>
                 <div class="level federal">
                     <h4 class="level-title">Federal</h4>
