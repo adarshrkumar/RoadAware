@@ -19,6 +19,9 @@ body:has(.image > input[type="checkbox"][id]:checked ~ label[for]) {
         background-position: center;
         background-size: cover;
 
+        &:has(> label[for] > img[style*="--b-c: contain;"]) {
+            background-size: contain;
+        }
         &:has(> label[for] > img[style*="--l: 0;"]) {
             background-position-x: left;
         }
