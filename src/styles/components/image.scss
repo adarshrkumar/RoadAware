@@ -18,6 +18,7 @@
         background-image: var(--image);
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
 
         &:has(> label[for] > img[style*="--b-c: contain;"]) {
             background-size: contain;
