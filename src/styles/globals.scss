@@ -51,21 +51,14 @@ body {
     }
 }
   
-.container, .hero {
+.container, .hero-container {
     max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     
-    &.container {
-        padding: $margin;
-    }
-    &.hero {
-        margin-top: $margin;
-    }
+    padding: $margin;
 }
 
 .hero {
-    margin-inline: auto;
     text-align: center;
 }
 
